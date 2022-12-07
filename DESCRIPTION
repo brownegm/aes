@@ -1,0 +1,11 @@
+Package: aes
+Title: Aesthetics For Axis Ticks and Colors
+Version: 0.0.0.9000
+Authors@R: 
+    person("Marvin", "Browne",  ,"brownegm@gmail.com", role = c("aut", "cre"))
+Description: Aesthetics for creating even plot axes ticks and holds color palettes.
+License: GPL (>= 3)
+Encoding: UTF-8
+Imports: dplyr
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
