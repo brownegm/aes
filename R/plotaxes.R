@@ -18,12 +18,16 @@
 #' #create three evenly spaced axis ticks for weight column on mtcars dataset
 #' axis_ticks<-plotaxis(dat=mtcars,colName = "wt")
 #' 
+#' axis_ticks
+#' 
 #' #Slightly more complicated 
 #' #create three evenly spaced axis ticks for airquality dataset
 #' months<-unique(airquality$Month)#unique list of months of year sampled
 #'
-#' dats<-lapply(months, function (month) filter(airquality,Month==month))#create list of datasets, one for each month
-#' axis_ticks<-lapply(dats, function(x) plotaxis(dat = x, colName = "Ozone"))#create set of evenly spaced axis tick values for all datasets.
+#' dats<-lapply(months,#create list of datasets, one for each month
+#'  function (month) dplyr::filter(airquality,Month==month))
+#' axis_ticks<-lapply(dats, #create set of evenly spaced axis tick values for all datasets.
+#' function(x) plotaxis(dat = x, colName = "Ozone"))
 #' 
 #' axis_ticks 
 
