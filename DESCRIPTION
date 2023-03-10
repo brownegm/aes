@@ -1,9 +1,9 @@
 Package: aes
 Title: Aesthetics For Axis Ticks and Colors
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person("Marvin", "Browne",  ,"brownegm@gmail.com", role = c("aut", "cre"))
-Maintainer:Marvin Browne <brownegm@gmail.com>
+Maintainer: Marvin Browne <brownegm@gmail.com>
 Description: Aesthetics for creating even plot axes ticks and holds color palettes.
 License: GPL (>= 3)
 Encoding: UTF-8
