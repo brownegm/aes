@@ -50,4 +50,8 @@
 #' Taxi Driver
 #' @rdname color.palletes
 "taxi.driver"
+
+#' ITV-PV colors
+#' @rdname color.palletes
+"itv.pv"
  

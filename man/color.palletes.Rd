@@ -10,6 +10,7 @@
 \alias{rando}
 \alias{sorry2botheryou}
 \alias{taxi.driver}
+\alias{itv.pv}
 \title{Color palletes to make the heart sing lol
 Herein lies the warm tones to make your plot pop.
 "@color.pallete" cinema on instagram is the main source of the movie specific palletes
@@ -40,6 +41,8 @@ An object of class \code{character} of length 10.
 An object of class \code{character} of length 7.
 
 An object of class \code{character} of length 6.
+
+An object of class \code{character} of length 8.
 }
 \usage{
 bluepurp
@@ -57,6 +60,8 @@ rando
 sorry2botheryou
 
 taxi.driver
+
+itv.pv
 }
 \description{
 Color palletes to make the heart sing lol
@@ -77,6 +82,8 @@ Randos
 Sorry to bother you
 
 Taxi Driver
+
+ITV-PV colors
 }
 \keyword{bluepurp}
 \keyword{colors}
