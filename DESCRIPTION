@@ -8,7 +8,7 @@ Description: Aesthetics for creating even plot axes ticks and holds color palett
 License: GPL (>= 3)
 Encoding: UTF-8
 Depends: R (>= 3.5)
-Imports: dplyr
+Imports: dplyr, ggplot2
 LazyData: True
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
