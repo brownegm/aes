@@ -1,6 +1,6 @@
 Package: aes
 Title: Aesthetics For Axis Ticks and Colors
-Version: 1.2.0.9000
+Version: 1.3.0
 Authors@R: 
     person("Marvin", "Browne",  ,"brownegm@gmail.com", role = c("aut", "cre"))
 Maintainer: Marvin Browne <brownegm@gmail.com>
