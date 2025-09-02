@@ -1,5 +1,3 @@
-
-
 # color palette
 #' Construct color palette for continuous or discrete data
 #'
@@ -42,29 +40,107 @@ colpal_proj <- function(cols = c("earth", "soft"),
   return(cols)
 }
 
+#' Fetch color palettes
+#'
+#' @param palette Palette name
+#' @param reverse Reverse the order of colors
+#'
+#' @returns A function that takes an integer n and returns n colors from the specified palette
+#' @export 
 
-#' Color scale (Continuous or Discrete) for project
+fetch_pal <- function(palette = c("bluepurp", 
+                                  "earthyby",
+                                  "forest",
+                                  "get.out",
+                                  "handmaids", 
+                                  "rando", 
+                                  "sorry2botheryou", 
+                                  "taxi.driver", 
+                                  "itv.pv"), reverse = FALSE) {
+  
+  pal <- match.arg(palette)
+  
+  cols <- switch(pal, 
+                 "bluepurp" = aes::bluepurp,
+                 "earthyby" = aes::earthy.blueyellow,
+                 "forest" = aes::earthy.forest,
+                 "get.out" = aes::get.out,
+                 "handmaids" = aes::handmaids,
+                 "rando" = aes::rando,
+                 "sorry2botheryou" = aes::sorry2botheryou,
+                 "taxi.driver" = aes::taxi.driver,
+                 "itv.pv" = aes::itv.pv
+                 )
+  
+  if (is.null(cols)) stop("Palette not found. Options are: ",
+                          c("bluepurp", 
+                            "earthyby",
+                            "forest",
+                            "get.out",
+                            "handmaids", 
+                            "rando", 
+                            "sorry2botheryou", 
+                            "taxi.driver", 
+                            "itv.pv"), 
+                          collapse = ", ")
+  
+  if (reverse) cols <- rev(cols)
+  function(n) {
+    if (n <= length(cols)) cols[seq_len(n)]
+    else grDevices::colorRampPalette(cols)(n)
+  }
+}
+
+
+#' Discrete color palettes for ggplot2 figures
 #'
-#' @param cols Earth tones, soft tones, etc.
-#' @param type Continuous or discrete
-#' @param n How many colors to return (only for continuous)
+#' @param palette Palette name
+#' @param discrete Boolean for discrete or continuous
+#' @param reverse Reverse the order of colors
+#' @param na.value Color for NA values
+#' @param ... Additional arguments passed to ggplot2 functions
 #'
-#' @returns Color scale function for ggplot2
+#' @returns Scale functions for ggplot2
 #' @export
-#' 
-#' @importFrom ggplot2 scale_color_manual scale_color_gradientn
+#' @rdname scale_color_bean
 
-scale_color_project <- function(cols = c("earth", "soft"),
-                        type = c("discrete", "continuous"), n = NULL) {
-  cols <- match.arg(cols)
-  type <- match.arg(type)
-  ct <- paste0(cols, "_", type)
+scale_color_bean <- function(palette = "earthyby", discrete = TRUE,
+                           reverse = FALSE, na.value = "grey80", ...) {
   
-  colpal <- colpal_proj(cols, type)
+  pal <- fetch_pal(palette = palette, reverse = reverse)
   
-  if (type == "discrete") {
-    return(scale_color_manual(values = colpal))
+  if (discrete) {
+    ggplot2::discrete_scale("colour",
+                            palette = pal, na.value = na.value, ...)
   } else {
-    return(scale_color_gradientn(colors = colpal))
+    ggplot2::scale_colour_gradientn(colours = pal(256),
+                                    na.value = na.value, ...)
+  }
+}
+
+#' Discrete fill palettes for ggplot2 figures
+#' 
+#' @param palette Palette name
+#' @param discrete Boolean for discrete or continuous
+#' @param reverse Reverse the order of colors
+#' @param na.value Color for NA values
+#' @param ... Additional arguments passed to ggplot2 functions
+#'
+#' @returns Scale functions for ggplot2
+#'
+#' @export
+#' @rdname scale_color_bean
+
+scale_fill_bean <- function(palette = "earthyby", discrete = TRUE,
+                          reverse = FALSE, na.value = "grey80", ...) {
+  
+  pal <- fetch_pal(palette = palette, reverse = reverse)
+  
+  if (discrete) {
+    ggplot2::discrete_scale("fill", paste0("my_", palette),
+                            palette = pal, na.value = na.value, ...)
+  } else {
+    ggplot2::scale_fill_gradientn(colours = pal(256),
+                                  na.value = na.value, ...)
   }
 }
