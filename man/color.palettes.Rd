@@ -11,12 +11,11 @@
 \alias{sorry2botheryou}
 \alias{taxi.driver}
 \alias{itv.pv}
-\title{Color palletes to make the heart sing lol
-Herein lies the warm tones to make your plot pop.
-"@color.pallete" cinema on instagram is the main source of the movie specific palletes
-To see the individual colors and plot them , see the R script in /exec}
+\alias{.woodcut_palettes}
+\title{earthy.blueyellow}
 \format{
 Lists of color palletes stored as objects
+
 \describe{
 \item{bluepurp}{a list of five bluish purple colors}
 \item{earthy.blueyellow}{a list of five earthy bluish yellow colors }
@@ -43,6 +42,8 @@ An object of class \code{character} of length 7.
 An object of class \code{character} of length 6.
 
 An object of class \code{character} of length 8.
+
+An object of class \code{list} of length 9.
 }
 \usage{
 bluepurp
@@ -62,28 +63,18 @@ sorry2botheryou
 taxi.driver
 
 itv.pv
+
+.woodcut_palettes
 }
 \description{
-Color palletes to make the heart sing lol
-Herein lies the warm tones to make your plot pop.
-"@color.pallete" cinema on instagram is the main source of the movie specific palletes
-To see the individual colors and plot them , see the R script in /exec
+All of the names of color palletes in woodcut package.
+}
+\details{
+Color paletes to make the heart sing lol. Herein lies the warm tones to make your plot pop.
 
-earthy.blueyellow
+I derived a lot of the movie specific palettes from the "@color.pallete.cinema" page on Instagram.
 
-earthy.forest
-
-Get Out
-
-Handmaids Tale
-
-Randos
-
-Sorry to bother you
-
-Taxi Driver
-
-ITV-PV colors
+To see the individual colors and plot them see \code{woodcut::woodcut_palettes()}.
 }
 \keyword{bluepurp}
 \keyword{colors}

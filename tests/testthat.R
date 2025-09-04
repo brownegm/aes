@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(aes)
+library(woodcut)
 
-test_check("aes")
+test_check("woodcut")

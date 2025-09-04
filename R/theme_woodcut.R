@@ -16,7 +16,7 @@
 #' @export
 #' 
 
-theme_base  <- function(
+theme_woodcut  <- function(
   font_family = "Helvetica Neue",
   font_size = 24,
   base_color = "#3f3f3f",

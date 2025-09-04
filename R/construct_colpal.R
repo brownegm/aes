@@ -61,15 +61,15 @@ fetch_pal <- function(palette = c("bluepurp",
   pal <- match.arg(palette)
   
   cols <- switch(pal, 
-                 "bluepurp" = aes::bluepurp,
-                 "earthyby" = aes::earthy.blueyellow,
-                 "forest" = aes::earthy.forest,
-                 "get.out" = aes::get.out,
-                 "handmaids" = aes::handmaids,
-                 "rando" = aes::rando,
-                 "sorry2botheryou" = aes::sorry2botheryou,
-                 "taxi.driver" = aes::taxi.driver,
-                 "itv.pv" = aes::itv.pv
+                 "bluepurp" = woodcut::bluepurp,
+                 "earthyby" = woodcut::earthy.blueyellow,
+                 "forest" = woodcut::earthy.forest,
+                 "get.out" = woodcut::get.out,
+                 "handmaids" = woodcut::handmaids,
+                 "rando" = woodcut::rando,
+                 "sorry2botheryou" = woodcut::sorry2botheryou,
+                 "taxi.driver" = woodcut::taxi.driver,
+                 "itv.pv" = woodcut::itv.pv
                  )
   
   if (is.null(cols)) stop("Palette not found. Options are: ",
@@ -102,9 +102,9 @@ fetch_pal <- function(palette = c("bluepurp",
 #'
 #' @returns Scale functions for ggplot2
 #' @export
-#' @rdname scale_color_bean
+#' @rdname scale_color_woodcut
 
-scale_color_bean <- function(palette = "earthyby", discrete = TRUE,
+scale_color_woodcut <- function(palette = "earthyby", discrete = TRUE,
                            reverse = FALSE, na.value = "grey80", ...) {
   
   pal <- fetch_pal(palette = palette, reverse = reverse)
@@ -129,9 +129,9 @@ scale_color_bean <- function(palette = "earthyby", discrete = TRUE,
 #' @returns Scale functions for ggplot2
 #'
 #' @export
-#' @rdname scale_color_bean
+#' @rdname scale_color_woodcut
 
-scale_fill_bean <- function(palette = "earthyby", discrete = TRUE,
+scale_fill_woodcut <- function(palette = "earthyby", discrete = TRUE,
                           reverse = FALSE, na.value = "grey80", ...) {
   
   pal <- fetch_pal(palette = palette, reverse = reverse)

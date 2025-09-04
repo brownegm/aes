@@ -1,10 +1,14 @@
 
-#' Color palletes to make the heart sing lol
-#'    Herein lies the warm tones to make your plot pop.
-#'    "@color.pallete" cinema on instagram is the main source of the movie specific palletes
-#'    To see the individual colors and plot them , see the R script in /exec
+#' @description All of the names of color palletes in woodcut package. 
+#' 
+#' @details Color paletes to make the heart sing lol. Herein lies the warm tones to make your plot pop.
+#' 
+#' I derived a lot of the movie specific palettes from the "@color.pallete.cinema" page on Instagram.
+#' 
+#' To see the individual colors and plot them see `woodcut::woodcut_palettes()`. 
 #' 
 #' @format Lists of color palletes stored as objects 
+#' 
 #' \describe{
 #' \item{bluepurp}{a list of five bluish purple colors}
 #' \item{earthy.blueyellow}{a list of five earthy bluish yellow colors }
@@ -20,38 +24,42 @@
 
 
 #' bluepurp
-#' @rdname color.palletes
+#' @rdname color.palettes
 "bluepurp"
 
 #' earthy.blueyellow
-#' @rdname color.palletes
+#' @rdname color.palettes
 "earthy.blueyellow"
 
 #' earthy.forest
-#' @rdname color.palletes
+#' @rdname color.palettes
 "earthy.forest"
  
 #' Get Out
-#' @rdname color.palletes
+#' @rdname color.palettes
 "get.out"
  
 #' Handmaids Tale
-#' @rdname color.palletes
+#' @rdname color.palettes
 "handmaids"
  
 #' Randos
-#' @rdname color.palletes
+#' @rdname color.palettes
 "rando"
  
 #' Sorry to bother you
-#' @rdname color.palletes
+#' @rdname color.palettes
 "sorry2botheryou"
  
 #' Taxi Driver
-#' @rdname color.palletes
+#' @rdname color.palettes
 "taxi.driver"
 
 #' ITV-PV colors
-#' @rdname color.palletes
+#' @rdname color.palettes
 "itv.pv"
- 
+
+#' A list of palettes
+#' @rdname color.palettes
+".woodcut_palettes"
+
