@@ -3,13 +3,14 @@
 #'
 #' @param font_family Font type
 #' @param font_size General font size
+#' @param strip_font_size Font size of the facet labels. Default to same as font_size.
 #' @param base_color General color of titles and labels
 #' @param axis_line_color Color of axis lines
 #' @param panel_border_color Color of panels
 #' @param panel_fill Color filling the panels
 #' @param facet_strip_fill Color of the panel facet labels
 #' @param legend_key_height Height of the legend with plot
-#'
+#' @param strip_face Font face of the facet labels
 #'
 #' @importFrom ggplot2 theme element_text element_rect element_line unit margin element_blank
 #' @returns Themed ggplot
@@ -19,12 +20,14 @@
 theme_woodcut  <- function(
   font_family = "Helvetica Neue",
   font_size = 24,
+  strip_font_size = font_size,
   base_color = "#3f3f3f",
   axis_line_color = "black",
   panel_border_color = "black",
   panel_fill = "white",
   facet_strip_fill = "white",
-  legend_key_height = unit(3, "cm")
+  legend_key_height = unit(3, "cm"), 
+  strip_face = "bold"
 ) {
   theme(
     text = element_text(family = font_family, size = font_size, color = base_color),
@@ -44,8 +47,8 @@ theme_woodcut  <- function(
     strip.text.x = element_text(
       hjust = 0.5,
       color = axis_line_color,
-      size = font_size,
-      face = "bold"
+      size = strip_font_size,
+      face = strip_face
     ),
     
     panel.spacing = unit(1, "lines"),

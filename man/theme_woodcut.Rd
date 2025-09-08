@@ -7,18 +7,22 @@
 theme_woodcut(
   font_family = "Helvetica Neue",
   font_size = 24,
+  strip_font_size = font_size,
   base_color = "#3f3f3f",
   axis_line_color = "black",
   panel_border_color = "black",
   panel_fill = "white",
   facet_strip_fill = "white",
-  legend_key_height = unit(3, "cm")
+  legend_key_height = unit(3, "cm"),
+  strip_face = "bold"
 )
 }
 \arguments{
 \item{font_family}{Font type}
 
 \item{font_size}{General font size}
+
+\item{strip_font_size}{Font size of the facet labels. Default to same as font_size.}
 
 \item{base_color}{General color of titles and labels}
 
@@ -31,6 +35,8 @@ theme_woodcut(
 \item{facet_strip_fill}{Color of the panel facet labels}
 
 \item{legend_key_height}{Height of the legend with plot}
+
+\item{strip_face}{Font face of the facet labels}
 }
 \value{
 Themed ggplot
