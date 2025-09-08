@@ -6,7 +6,7 @@
 \usage{
 fetch_pal(
   palette = c("bluepurp", "earthyby", "forest", "get.out", "handmaids", "rando",
-    "sorry2botheryou", "taxi.driver", "itv.pv"),
+    "sorry2botheryou", "taxi.driver", "itv.pv", "earth_cb", "earth_teal_ochre"),
   reverse = FALSE
 )
 }

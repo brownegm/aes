@@ -56,9 +56,7 @@ fetch_pal <- function(palette = c("bluepurp",
                                   "rando", 
                                   "sorry2botheryou", 
                                   "taxi.driver", 
-                                  "itv.pv", 
-                                  "earth_cb", 
-                                  "earth_teal_ochre"), reverse = FALSE) {
+                                  "itv.pv"), reverse = FALSE) {
   
   pal <- match.arg(palette)
   
@@ -71,9 +69,7 @@ fetch_pal <- function(palette = c("bluepurp",
                  "rando" = woodcut::rando,
                  "sorry2botheryou" = woodcut::sorry2botheryou,
                  "taxi.driver" = woodcut::taxi.driver,
-                 "itv.pv" = woodcut::itv.pv, 
-                 "earth_cv" = woodcut::earth_cb,
-                 "earth_teal_ochre" = woodcut::earth_teal_ochre
+                 "itv.pv" = woodcut::itv.pv
                  )
   
   if (is.null(cols)) stop("Palette not found. Options are: ",
@@ -85,9 +81,7 @@ fetch_pal <- function(palette = c("bluepurp",
                             "rando", 
                             "sorry2botheryou", 
                             "taxi.driver", 
-                            "itv.pv", 
-                            "earth_cb", 
-                            "earth_teal_ochre"), 
+                            "itv.pv"), 
                           collapse = ", ")
   
   if (reverse) cols <- rev(cols)
