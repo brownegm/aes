@@ -76,16 +76,39 @@ bluepurp <- c('#000033', "#104a65", '#f4ba32', '#cccbc1', '#770a35')
 #barplot(rep(1,length(bluepurp)), col=bluepurp, main = "bluepurp")
 
 ###
-itv.pv <- c(
-  "palevioletred4",
-  "darkcyan",
-  "salmon4",
-  "steelblue",
-  "goldenrod3",
-  "darkgreen",
-  "deeppink4",
-  "gray41"
+itv.pv <-  c(
+    "#2E6E6E", # teal
+    "#516E8E", # slate blue
+    "#8E83A8", # dusty purple
+    "#B3843C", # ochre
+    "#6F855B", # sage
+    "#7E6A5C", # earthy rose-brown
+    "#707070", # neutral gray
+    "#D2C8B6"  # pale sand
 )
+
+earth_cb <- earth_muted_purple <- c(
+  "#4B3B31", # soil
+  "#7A5E43", # clay
+  "#6C7A55", # moss
+  "#8D9C7A", # sage
+  "#A89E8D", # stone
+  "#8B6D88", # heather
+  "#A38FA3", # dusty plum
+  "#E0DBD1"  # ash
+)
+
+earth_teal_ochre <- c(
+  "#556B2F", # forest moss
+  "#7A8450", # olive leaf
+  "#A0A97A", # sagebrush
+  "#C2B970", # dry grass
+  "#5F7F76", # river teal
+  "#7E8C8C", # slate gray
+  "#B2B6AA", # cloud stone
+  "#E1DCCF"  # pale sand
+)
+
 
 #barplot(rep(1,length(bluepurp)), col=bluepurp, main = "bluepurp")
 
@@ -99,7 +122,9 @@ itv.pv <- c(
   "sorry2botheryou" = sorry2botheryou, 
   "taxi.driver" = taxi.driver, 
   "handmaids" = handmaids, 
-  "itv.pv" = itv.pv
+  "itv.pv" = itv.pv,
+  "earth_cb" = earth_cb, 
+  "earth_teal_cb" = earth_teal_ochre
 )
 
 save(

@@ -59,6 +59,10 @@
 #' @rdname color.palettes
 "itv.pv"
 
+#' All woodcut palettes
+#' @rdname color.palettes
+"earth_cb"
+
 #' A list of palettes
 #' @rdname color.palettes
 ".woodcut_palettes"
