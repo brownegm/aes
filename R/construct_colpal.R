@@ -72,7 +72,7 @@ fetch_pal <- function(palette = c("bluepurp",
                  "sorry2botheryou" = woodcut::sorry2botheryou,
                  "taxi.driver" = woodcut::taxi.driver,
                  "itv.pv" = woodcut::itv.pv, 
-                 "earth_cv" = woodcut::earth_cb,
+                 "earth_cb" = woodcut::earth_cb,
                  "earth_teal_ochre" = woodcut::earth_teal_ochre
                  )
   
@@ -116,7 +116,7 @@ scale_color_woodcut <- function(palette = "earthyby", discrete = TRUE,
   pal <- fetch_pal(palette = palette, reverse = reverse)
   
   if (discrete) {
-    ggplot2::discrete_scale("colour",
+    ggplot2::discrete_scale("color",
                             palette = pal, na.value = na.value, ...)
   } else {
     ggplot2::scale_colour_gradientn(colours = pal(256),
@@ -143,7 +143,7 @@ scale_fill_woodcut <- function(palette = "earthyby", discrete = TRUE,
   pal <- fetch_pal(palette = palette, reverse = reverse)
   
   if (discrete) {
-    ggplot2::discrete_scale("fill", paste0("my_", palette),
+    ggplot2::discrete_scale("fill", palette,
                             palette = pal, na.value = na.value, ...)
   } else {
     ggplot2::scale_fill_gradientn(colours = pal(256),
