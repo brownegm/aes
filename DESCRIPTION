@@ -1,6 +1,6 @@
 Package: woodcut
 Title: Aesthetics For Colors and Themes
-Version: 1.3.1
+Version: 1.3.2
 Authors@R: 
     person(given = "Marvin", family = "Browne", email = "brownegm@gmail.com", role = c("aut", "cre"))
 Maintainer: Marvin Browne <brownegm@gmail.com>
