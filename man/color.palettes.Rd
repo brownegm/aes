@@ -11,6 +11,8 @@
 \alias{sorry2botheryou}
 \alias{taxi.driver}
 \alias{itv.pv}
+\alias{earth_cb}
+\alias{earth_teal_ochre}
 \alias{.woodcut_palettes}
 \title{earthy.blueyellow}
 \format{
@@ -43,7 +45,11 @@ An object of class \code{character} of length 6.
 
 An object of class \code{character} of length 8.
 
-An object of class \code{list} of length 9.
+An object of class \code{character} of length 8.
+
+An object of class \code{character} of length 8.
+
+An object of class \code{list} of length 11.
 }
 \usage{
 bluepurp
@@ -63,6 +69,10 @@ sorry2botheryou
 taxi.driver
 
 itv.pv
+
+earth_cb
+
+earth_teal_ochre
 
 .woodcut_palettes
 }

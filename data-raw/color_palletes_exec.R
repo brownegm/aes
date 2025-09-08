@@ -137,6 +137,8 @@ save(
   earthy.blueyellow,
   bluepurp,
   itv.pv,
+  earth_cb, 
+  earth_teal_ochre,
   .woodcut_palettes,
   file = here('data', 'color.palletes.rda')
 )

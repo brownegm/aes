@@ -59,9 +59,13 @@
 #' @rdname color.palettes
 "itv.pv"
 
-#' All woodcut palettes
+#' Color-blind friendly earthy
 #' @rdname color.palettes
 "earth_cb"
+
+#' Color-blind friendly earthy with blues and ochres
+#' @rdname color.palettes
+"earth_teal_ochre"
 
 #' A list of palettes
 #' @rdname color.palettes
