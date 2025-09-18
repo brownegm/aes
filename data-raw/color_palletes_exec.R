@@ -109,6 +109,12 @@ earth_teal_ochre <- c(
   "#E1DCCF"  # pale sand
 )
 
+redsandbrowns <- c(
+  "#1c1d15", "#39332c", "#7c5343", "#9e4e3b", "#b24e40",
+  "#d0b18a", "#c9a489", "#856354", "#aa6a55", "#f8e5c4",
+  "#b3875d", "#210c05", "#35180a", "#d3aa82", "#c99d78",
+  "#582b23", "#322318", "#3f3022", "#433525", "#493b2a"
+)
 
 #barplot(rep(1,length(bluepurp)), col=bluepurp, main = "bluepurp")
 
@@ -124,7 +130,8 @@ earth_teal_ochre <- c(
   "handmaids" = handmaids, 
   "itv.pv" = itv.pv,
   "earth_cb" = earth_cb, 
-  "earth_teal_cb" = earth_teal_ochre
+  "earth_teal_cb" = earth_teal_ochre, 
+  "rednbrowns" = redsandbrowns
 )
 
 save(
@@ -139,6 +146,7 @@ save(
   itv.pv,
   earth_cb, 
   earth_teal_ochre,
+  redsandbrowns,
   .woodcut_palettes,
   file = here('data', 'color.palletes.rda')
 )
